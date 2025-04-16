@@ -1,0 +1,6 @@
+insert into Avances_aaa (id,AAA) values
+(1,'CAÑETE FORTALEZA'),
+(2,'HUARMEY CHICAMA'),
+(3,'CHAPARRA CHINCHA'),
+(4,'JEQUETEPEQUE ZARUMILLA'),
+(5,'PAMPAS APURIMAC');

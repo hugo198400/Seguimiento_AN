@@ -1,0 +1,21 @@
+import os
+import django
+
+# Configurar el entorno de Django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'APP1.settings')
+django.setup()
+
+from django.contrib.auth import get_user_model
+from Avances.models import CustomUser
+
+User = get_user_model()
+
+try:
+    superuser = CustomUser.objects.get(username='JFLORES')
+    superuser.set_password('JF920108597')
+    superuser.save()
+    print("Contraseña del administrador reseteada exitosamente.")
+except CustomUser.DoesNotExist:
+    print("No se encontró un usuario administrador con el nombre 'Haller01'.")
+except Exception as e:
+    print(f"Ocurrió un error: {e}")
